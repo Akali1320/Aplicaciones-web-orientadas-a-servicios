@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CRUD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--Aqui podemos tenemos el formulario de modificar el cual mandamos los datos a nuesrio jsp para 
+        modificar los datos que ya estan en la base de datos-->
+    <center> <form action="Modificar.jsp" method="post">
+            <h1>Modificar Persona</h1>
+            <br>
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="n"/>
+            <br>
+            <br>
+            <label>Apellidos: </label>
+            <input type="text" name="a"/><br>
+            <br>
+            <br>
+            <label>Curp: </label>
+            <input type="text" name="c"/><br>
+            <br>
+            <br>
+            <label>Rfc: </label>
+            <input type="text" name="r"/><br>
+            <br>
+            <br>
+            <label> Estado Civil: </label>
+            <select name="s">
+                <option value="Casado">Casado</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Union Libre">Union Libre</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Modificar"/> 
+        </form></center>
+    </body>
+</html>

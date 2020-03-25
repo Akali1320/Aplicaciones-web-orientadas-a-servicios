@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0">
+        <title>Maps JavaScript API</title>
+        <!--Estos codigos los proporciona google tanto como el css  pero 
+        nosotros podemos cambiar a como nosotros queramos -->
+        
+        <!--Ahora bien en la etiqueta Style esta que tamaño tendra nuestro mapa-->
+        <style> 
+            
+          #map {
+        height: 100%;
+      }
+     
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+        </style> 
+    </head>  
+    <body>
+        <!--Aqui podemos ver que estamos ingresando los Recursos como bien sabemos necesitamos una credencial para desarrollador 
+        pero google nos permite trabajar con credenciales temporales en la dirección URI necesitamos que ingresar el numero 
+        de la credencial temporal ahora bien se tiene que ingresar en donde dice Key-->
+        <div id ="map"> </div> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRlTwAmaF8wPgD4O7LkblJivA1G59sdHA&callback=initMap" async defer></script>
+        <!--Ahora bien para poner que lugar queramos que se vea se tiene poner la latitut y longitud del lugar
+        Como la credencia temporal tiene una fecha de vencimineto cuando susceda esto nos mandara un error de cargar esto
+        es por que a vencido la credencial-->
+        <script>
+		
+      var map;
+         function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 19.884495, lng: -98.968979},
+                    zoom: 13,
+                });
+                var marker = new google.maps.Marker({
+                    position: {lat: 19.884495, lng: -98.968979},
+                    map: map,
+                    title: 'Haciendas de Tizayuca'
+                });
+            }
+
+
+        </script>
+
+    </body> 
+</html>

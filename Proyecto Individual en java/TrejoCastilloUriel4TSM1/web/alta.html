@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CRUD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="WEB-INF/estilos.css">
+    </head>
+    <body>
+        <!--Este formulario forma parte de un CRUD este modulo en particular 
+        tiene como objetivo registrar a una persona dentro de nuestra base de datos-->
+    <center> <form action="guardar.jsp" method="post">
+            <h1>Registrar Persona</h1>
+            <br>
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="nom"/>
+            <br>
+            <br>
+            <label>Apellidos: </label>
+            <input type="text" name="ap"/><br>
+            <br>
+            <br>
+            <label>Curp: </label>
+            <input type="text" name="curp"/><br>
+            <br>
+            <br>
+            <label>Rfc: </label>
+            <input type="text" name="rfc"/><br>
+            <br>
+            <br>
+            <label> Estado Civil: </label>
+            <select name="e">
+                  <option value="Casado">Casado</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Union Libre">Union Libre</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Buscar"/> 
+        </form></center>
+    </body>
+</html>
