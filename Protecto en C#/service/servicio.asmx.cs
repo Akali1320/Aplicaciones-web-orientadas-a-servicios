@@ -36,11 +36,12 @@ namespace service
             String dato = "2";
             NpgsqlConnection con = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["postgres"].ConnectionString);
             con.Open();
-            NpgsqlCommand llamar = new NpgsqlCommand("Select nombre,curp From personas where id_persona ="+dato, con);
+            NpgsqlCommand llamar = new NpgsqlCommand("Select nombre,curp From personas where id_persona =" + dato, con);
             NpgsqlDataAdapter añadir = new NpgsqlDataAdapter(llamar);
             DataSet dz = new DataSet();
             añadir.Fill(dz);
             return dz;
         }
+
     }
 }

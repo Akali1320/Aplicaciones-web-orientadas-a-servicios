@@ -106,6 +106,7 @@
     <Content Include="Connected Services\ServiceReference1\service.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="WebService2.asmx" />
     <None Include="Connected Services\ServiceReference1\WebService1.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -115,7 +116,7 @@
     </None>
     <Content Include="Web.config" />
     <Content Include="WebForm2.aspx" />
-    <Content Include="WebService1.asmx" />
+    <Content Include="servicio.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
@@ -131,8 +132,12 @@
     <Compile Include="WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebService1.asmx.cs">
-      <DependentUpon>WebService1.asmx</DependentUpon>
+    <Compile Include="servicio.asmx.cs">
+      <DependentUpon>servicio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService2.asmx.cs">
+      <DependentUpon>WebService2.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
